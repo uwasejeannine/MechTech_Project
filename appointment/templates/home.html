@@ -1,0 +1,209 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body{
+            background-image: url("{% static 'img/bkn.jpeg' %}") ;
+            -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+         background-size: cover;
+         background-repeat: no-repeat;
+
+        }
+       .nav-item {
+        color: white;
+        text-decoration: none;
+        padding-left: 20px;
+        padding-right: 30px;
+        font-size: 1.2rem;
+      }
+      .nav-item:hover {
+        color: #ffdc12;
+      }
+      .row a{
+          color: white;
+      }
+      .row a:hover{
+          color: #ffdc12;
+      }
+      .services{
+          margin-top: 10%;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{% block title %}MechTech{% endblock %}</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'img/mechtechIcon.png' %}"
+    />
+  </head>
+
+  <body>
+    <!-- navbars -->
+    <div style="background-color: black; height: 80px;">
+      <nav class="navbar navbar-expand-sm black navbar-dark">
+        <a class="navbar-brand" href="">
+          <img
+          src="{% static 'img/mechtechIcon.png' %}"
+          alt="logo"
+          style="width: 50px; margin-left: 40px;"
+          />
+          MechTech
+          
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText" style="background-color: black;">
+          <ul class="navbar-nav mr-auto"></ul>
+          <div>
+            <a
+              style="text-decoration: none;"
+              class="nav-item"
+              href=""
+            >
+              Home
+            </a>
+            <a
+              style="text-decoration: none;"
+              class="nav-item"
+              href="{%url 'services'%}"
+            >
+            Services            
+          </a>
+            <a
+              style="text-decoration: none;"
+              class="nav-item"
+              href=""
+            >
+            About
+            </a>
+            <a
+              style="text-decoration: none;"
+              class="nav-item"
+              href=""
+            >
+            Testimonial
+            </a>
+            <a
+              style="text-decoration: none;"
+              class="nav-item"
+              href=""
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- section1 -->
+      <div class="container hero" style="padding-top: 15%;" >
+        <div class="row">
+            <div class="col-12 col-lg-6 col-xl-5 offset-xl-1" style="color: white;">
+                <h1>Welcome to MechTech</h1>
+                <p> We connect you to the most talented mechanics in the country.
+                    Our services are convinient and affordable.
+                    </p>
+                    <a href="" class="btn bg-dark btn-lg action-button" type="button">Request A mechanic</a>
+                    <a href="" class="btn bg-dark btn-lg action-button" type="button">Became A mechanic</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- services section -->
+     <section class="services">
+        <div class=" text-center py-5 mb-4"  style="background-color:black;">
+            <div class="container">
+              <h1 class="fw-light text-white"> Our Services</h1>
+              <p class="overview" style="color:white;">Life’s too short to spend it at the repair shop <span style="color:#f16000; font-weight: bold;">MechTech</span> Will repair your car from your home, office, or any other place your car can broke at.
+              </p>
+            </div>
+          </div>
+        <div class="container">
+          <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-0 shadow">
+                <img src="{% static 'img/easy.png' %}" class="card-img-top" alt="..." style="width:50px;margin-left: 40%;">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-0">WE MAKE IT EASY</h5>
+                  <div class="card-text text-black-50">Get a quote and book a service online 24/7. Our mechanics will come to your home or office, even on evenings and weekends.</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-0 shadow">
+                <img src="{% static 'img/money.png' %}" class="card-img-top" alt="..." style="width:40px;margin-left: 40%;">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-0">FAIR AND TRANSPARENT PRICING</h5>
+                  <div class="card-text text-black-50">We offer fair and transparent pricing and provide estimates upfront for hundreds of services on thousands of cars</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-0 shadow">
+                <img src="{% static 'img/faster.png' %}" class="card-img-top" alt="..."style="width:40px;margin-left: 40%;">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-0">FASTER TO GET TO YOU</h5>
+                  <div class="card-text text-black-50">As soon as you call, our agent will reach out to you and help you as soon as we can. All our agents are hear to support you</div> </div>
+              </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-0 shadow">
+                <img src="{% static 'img/happy.png' %}" class="card-img-top" alt="..."style="width:40px;margin-left: 40%;">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-0">HAPPINESS GUARANTEED</h5>
+                  <div class="card-text text-black-50">We only work with highly rated mechanics.All services are backed by our 12-month / 12,000-mile warranty.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- Footer -->
+
+    <!-- Footer -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
